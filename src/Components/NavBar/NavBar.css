@@ -1,0 +1,135 @@
+.nav-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #0b0b0bc9;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(79, 79, 79, 0.7);
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  width: 90%;
+  margin-top: 10px;
+}
+.nav-btn {
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1); /* glassy effect */
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #e50914;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #e50914; /* Netflix red accent */
+  transition: transform 0.2s;
+}
+
+.logo h1:hover {
+  transform: scale(1.05);
+}
+
+/* Search bar */
+.search-bar input {
+  width: 350px;
+  max-width: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar input:focus {
+  background-color: #333;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.6);
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #e50914;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* User icon */
+.user-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid #e50914;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-icon img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #e50914;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .search-bar input {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide links on mobile */
+  }
+
+  .search-bar input {
+    width: 180px;
+  }
+}
