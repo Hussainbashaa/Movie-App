@@ -19,7 +19,7 @@ const Cards = ({ search, filteredData, setFilteredData, setSearch }) => {
       } else {
         setFilteredData([]);
       }
-      setSearch("");
+     
     };
     fetchMovies();
   }, [search, setFilteredData]);
